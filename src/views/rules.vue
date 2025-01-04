@@ -7,7 +7,7 @@
       <ol>
         <li>遊戲開始後各組隨機抽出支援物品與數量。</li>
         <li>集齊指定物品後拍照上傳至 Line。</li>
-        <li>最快完成的前三組則獲得分數。</li>
+        <li>最快完成的前三組將獲得分數。</li>
         <li>最終累積分數最高的前三組將獲得獎金。</li>
       </ol>
     </div>
@@ -41,17 +41,15 @@ const startGame = () => {
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
   background: linear-gradient(to bottom, #003399, #1a73e8);
   color: #fff;
-  font-family: 'Arial', sans-serif;
-  padding: 1rem;
 
   .header {
     h2 {
       font-size: 1.2rem;
-      margin: 0;
+      margin: 0 0 0.5rem;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
   }
@@ -62,13 +60,18 @@ const startGame = () => {
     padding: 0.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
     ol {
       margin: 0;
       padding-left: 1.5rem;
+
       li {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      li:not(:last-child) {
         margin-bottom: 0.5rem;
-        font-size: 0.8rem;
-        line-height: 1.2;
       }
     }
   }
