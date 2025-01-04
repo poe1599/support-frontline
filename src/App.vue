@@ -14,11 +14,14 @@
   width: 100%;
   height: 100vh;
   --p-button-label-font-weight: bold;
+  font-family: 'Arial', sans-serif;
 
   &__container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
 
     & > * {
       zoom: 4;
