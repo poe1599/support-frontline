@@ -7,8 +7,13 @@
       <p>歡迎來到支援前線！準備好迎接挑戰了嗎？</p>
     </div>
     <div class="buttons">
-      <Button @click="startGame">開始遊戲</Button>
-      <Button severity="info" @click="showInstructions">遊戲說明</Button>
+      <router-link :to="{ name: 'rules' }">
+        <Button @click="startGame">開始遊戲</Button>
+      </router-link>
+
+      <router-link :to="{ name: 'rules' }">
+        <Button severity="info" @click="showInstructions">規則說明</Button>
+      </router-link>
     </div>
   </div>
 </template>

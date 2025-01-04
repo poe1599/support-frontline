@@ -1,7 +1,20 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
 
 const routes = [
-  { path: '/', component: ()=>import('~me/views/index.vue') },
+  {
+    name: 'index',
+    path: '/',
+    component: () => import('~me/views/index.vue'),
+  },
+  {
+    name: 'rules',
+    path: '/rules',
+    component: () => import('~me/views/rules.vue'),
+  },
+  {
+    path: '/:catchAll(.*)',
+    redirect: { name: 'index' },
+  },
 ]
 
 const router = createRouter({
