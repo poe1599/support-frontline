@@ -32,14 +32,14 @@ const showInstructions = () => {
 </script>
 <style scoped lang="scss">
 .game-start-screen {
-  width: 100%;
-  height: 100%;
-
   .header {
     text-align: center;
+    line-height: 1;
+    margin: 1rem 0;
+
     h1 {
       font-size: 3.4rem;
-      margin: 1rem 0;
+      margin: 0;
       color: #ffa023;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
@@ -48,7 +48,9 @@ const showInstructions = () => {
   .description {
     text-align: center;
     margin: 1rem 0;
+
     p {
+      margin: 0;
       font-size: 1.2rem;
       line-height: 1.5;
     }
