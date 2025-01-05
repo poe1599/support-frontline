@@ -1,16 +1,19 @@
 <template>
-  <div class="">
+  <div class="gm">
     <div class="">
-      <ul v-if="gameQuestions">
+      <ol v-if="gameQuestions">
         <li v-for="quest in gameQuestions">
           {{ `${quest.name} ${quest.count} ${quest.unit}` }}
         </li>
-      </ul>
+      </ol>
+      <div v-else class="">
+        <p>點擊「支援前線」以開始遊戲</p>
+      </div>
     </div>
-    <div class="">
-      <Button @click="getRandomQuestions">支援前線</Button>
-      <router-link :to="{ name: 'score' }">
-        <Button @click="">結算</Button>
+    <div class="gm__buttons">
+      <Button v-if="!gameQuestions" @click="getRandomQuestions">支援前線</Button>
+      <router-link v-else :to="{ name: 'score' }">
+        <Button severity="info">結算</Button>
       </router-link>
     </div>
   </div>
@@ -39,4 +42,21 @@ const getRandomQuestions = () => {
   )
 }
 </script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.gm {
+  li {
+    font-size: 1.5rem;
+  }
+
+  li:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
+</style>
