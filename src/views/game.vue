@@ -9,7 +9,9 @@
     </div>
     <div class="">
       <Button @click="getRandomQuestions">支援前線</Button>
-      <Button @click="">結算</Button>
+      <router-link :to="{ name: 'score' }">
+        <Button @click="">結算</Button>
+      </router-link>
     </div>
   </div>
 </template>

@@ -5,6 +5,8 @@ import preset from '~me/preset'
 import router from '~me/router'
 import 'primeicons/primeicons.css'
 import Button from 'primevue/button'
+import InputNumber from 'primevue/inputnumber';
+
 
 const app = createApp(App)
 
@@ -19,5 +21,6 @@ app.use(PrimeVue, {
 })
 
 app.component('Button', Button)
+app.component('InputNumber', InputNumber)
 
 app.mount('#app')
