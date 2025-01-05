@@ -12,6 +12,11 @@ const routes = [
     component: () => import('~me/views/rules.vue'),
   },
   {
+    name: 'game',
+    path: '/game',
+    component: () => import('~me/views/game.vue'),
+  },
+  {
     path: '/:catchAll(.*)',
     redirect: { name: 'index' },
   },

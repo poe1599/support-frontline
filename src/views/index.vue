@@ -7,7 +7,7 @@
       <p>歡迎來到支援前線！準備好迎接挑戰了嗎？</p>
     </div>
     <div class="buttons">
-      <router-link :to="{ name: 'rules' }">
+      <router-link :to="{ name: 'game' }">
         <Button @click="startGame">開始遊戲</Button>
       </router-link>
 

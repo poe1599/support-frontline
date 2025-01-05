@@ -16,7 +16,7 @@
         <Button severity="secondary" @click="backToMenu">返回主畫面</Button>
       </router-link>
 
-      <router-link :to="{ name: '' }">
+      <router-link :to="{ name: 'game' }">
         <Button @click="startGame">立即開始</Button>
       </router-link>
     </div>
