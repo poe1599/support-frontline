@@ -1,10 +1,43 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+import gameStore from '~me/stores/gameStore'
+
+const menu = ref()
+
+const items = ref([
+  {
+    label: '計分歸零',
+    icon: 'pi pi-refresh',
+    command: () => resetGameScore(),
+  },
+])
+
+const toggle = (event: any) => {
+  menu.value.toggle(event)
+}
+
+const resetGameScore = () => {
+  for (const team of gameStore.value.teams) {
+    team.score = 0
+  }
+}
+</script>
 
 <template>
   <div class="layout">
     <div class="layout__container">
       <router-view />
     </div>
+
+    <Button
+      class="configButton"
+      type="button"
+      icon="pi pi-cog"
+      @click="toggle"
+      aria-haspopup="true"
+      aria-controls="overlay_menu"
+    />
+    <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" />
   </div>
 </template>
 
@@ -36,5 +69,11 @@ button {
   &:hover {
     transform: scale(1.05);
   }
+}
+
+.configButton {
+  position: fixed !important;
+  top: 1rem;
+  right: 1rem;
 }
 </style>
