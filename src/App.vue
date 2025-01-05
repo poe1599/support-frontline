@@ -28,4 +28,13 @@
     }
   }
 }
+
+button {
+  zoom: 0.8;
+  transition: transform 0.2s, background-color 0.2s !important;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
 </style>

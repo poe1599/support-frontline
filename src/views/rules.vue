@@ -80,15 +80,6 @@ const startGame = () => {
     margin-top: 1rem;
     display: flex;
     gap: 1rem;
-    zoom: 0.8;
-
-    button {
-      transition: transform 0.2s, background-color 0.2s;
-
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
   }
 }
 </style>

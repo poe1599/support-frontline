@@ -60,14 +60,6 @@ const showInstructions = () => {
     display: flex;
     justify-content: center;
     gap: 1rem;
-
-    button {
-      transition: transform 0.2s, background-color 0.2s;
-
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
   }
 }
 </style>

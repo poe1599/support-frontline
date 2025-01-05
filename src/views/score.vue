@@ -89,8 +89,7 @@ const getTeamRank = (team: TeamType): string => {
   &__buttons {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
-    zoom: 0.5;
+    margin-top: 1rem;
   }
 }
 </style>
