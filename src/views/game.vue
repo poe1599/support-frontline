@@ -11,7 +11,9 @@
       </div>
     </div>
     <div class="gm__buttons">
-      <Button v-if="!gameQuestions" @click="getRandomQuestions">支援前線</Button>
+      <Button v-if="!gameQuestions" @click="getRandomQuestions"
+        >支援前線</Button
+      >
       <router-link v-else :to="{ name: 'score' }">
         <Button severity="info">結算</Button>
       </router-link>
@@ -44,8 +46,9 @@ const getRandomQuestions = () => {
 </script>
 <style scoped lang="scss">
 .gm {
+  p,
   li {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
 
   li:not(:last-of-type) {

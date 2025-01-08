@@ -38,7 +38,7 @@ const showInstructions = () => {
     margin: 1rem 0;
 
     h1 {
-      font-size: 3.4rem;
+      font-size: 6rem;
       margin: 0;
       color: #ffa023;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -47,11 +47,11 @@ const showInstructions = () => {
 
   .description {
     text-align: center;
-    margin: 1rem 0;
+    margin: 2rem 0;
 
     p {
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 2.4rem;
       line-height: 1.5;
     }
   }

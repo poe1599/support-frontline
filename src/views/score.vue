@@ -55,6 +55,7 @@ const getTeamRank = (team: TeamType): string => {
 .sc {
   &__title {
     text-align: center;
+    font-size: 1.2rem;
     margin: 0 auto 0.5rem;
   }
 

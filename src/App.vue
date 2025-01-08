@@ -57,13 +57,12 @@ const resetGameScore = () => {
     width: 100%;
 
     & > * {
-      zoom: 4;
+      zoom: 2;
     }
   }
 }
 
 button {
-  zoom: 0.8;
   transition: transform 0.2s, background-color 0.2s !important;
 
   &:hover {

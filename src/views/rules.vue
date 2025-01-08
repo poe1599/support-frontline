@@ -6,9 +6,16 @@
     <div class="rules">
       <ol>
         <li>遊戲開始後隨機抽出三組支援物品與數量。</li>
-        <li>集齊指定物品後拍照上傳至 Line。單場不可重複上傳。</li>
-        <li>單次完成 1 組 +1 分, 2 組 +3 分, 3 組 +5 分。</li>
-        <li>計時 3 分鐘截止。最快完成額外 + 1分。</li>
+        <li>
+          集齊指定物品後拍照上傳至 Line。<strong>單場不可重複上傳。</strong>
+        </li>
+        <li>
+          單次完成 <strong>1 組 +1 分</strong>, <strong>2 組 +3 分</strong>,
+          <strong>3 組 +5 分</strong>。
+        </li>
+        <li>
+          計時 <strong>3 分鐘</strong> 截止。最快完成<strong>額外 + 1分</strong>。
+        </li>
         <li>最終累積分數最高的前三組將獲得獎金。</li>
       </ol>
     </div>
@@ -49,8 +56,8 @@ const startGame = () => {
 
   .header {
     h2 {
-      font-size: 1.2rem;
-      margin: 0 0 0.5rem;
+      font-size: 2.4rem;
+      margin: 0 0 1rem;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
   }
@@ -58,22 +65,26 @@ const startGame = () => {
   .rules {
     width: 90%;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 
     ol {
       margin: 0;
-      padding-left: 1.5rem;
+      padding-left: 3rem;
 
       li {
-        font-size: 1rem;
+        font-size: 2rem;
         line-height: 1.5;
       }
 
       li:not(:last-child) {
         margin-bottom: 0.5rem;
       }
+    }
+
+    strong {
+      color: rgb(255, 132, 0);
     }
   }
 
