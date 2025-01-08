@@ -55,7 +55,7 @@ const getTeamRank = (team: TeamType): string => {
 .sc {
   &__title {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin: 0 auto 0.5rem;
   }
 
@@ -68,7 +68,7 @@ const getTeamRank = (team: TeamType): string => {
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    zoom: 0.4;
+    zoom: 0.8;
     gap: 1rem 4rem;
     width: 48rem;
     margin: auto;
