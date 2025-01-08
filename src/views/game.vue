@@ -15,9 +15,7 @@
     </div>
     <div class="gm__buttons">
       <Button v-if="!gameQuestions" @click="clickGameStart">支援前線</Button>
-      <router-link v-else :to="{ name: 'score' }">
-        <Button severity="info">結算</Button>
-      </router-link>
+      <Button v-else severity="info" @click="clickToScore">結算</Button>
     </div>
   </div>
 </template>
@@ -25,10 +23,13 @@
 import gameStore from '~me/stores/gameStore'
 import { ref, computed } from 'vue'
 import { sampleSize, map, random } from 'lodash-es'
+import { useRouter } from 'vue-router'
 
 const GAME_QUESTION_COUNT = 3
 
 const GAME_LIMIT_SECONDS = 180
+
+const router = useRouter()
 
 const gameQuestions = ref<
   { name: string; unit: string; count: number }[] | null
@@ -73,6 +74,21 @@ const getRandomQuestions = () => {
 const clickGameStart = () => {
   getRandomQuestions()
   startGameTimer()
+}
+
+const clickToScore = () => {
+  if (!gameQuestions.value) return
+
+  const questionsText = encodeURIComponent(
+    gameQuestions.value
+      .map((quest) => `${quest.name} ${quest.count} ${quest.unit}`)
+      .join(',')
+  )
+
+  router.push({
+    name: 'score',
+    query: { questions: questionsText },
+  })
 }
 </script>
 <style scoped lang="scss">
