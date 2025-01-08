@@ -1,6 +1,8 @@
 <template>
   <div class="gm">
-    <p class="">{{ timeText }}</p>
+    <p class="gm__time" :style="{ color: gameTimer < 30 ? 'orange' : '' }">
+      {{ timeText }}
+    </p>
     <div class="">
       <ol v-if="gameQuestions">
         <li v-for="quest in gameQuestions">
@@ -74,19 +76,24 @@ const clickGameStart = () => {
 }
 </script>
 <style scoped lang="scss">
+p {
+  text-align: center;
+  margin: 0;
+}
+
+p,
+li {
+  font-size: 3rem;
+}
+
+li:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
 .gm {
-  p {
-    text-align: center;
-    margin: 0;
-  }
-
-  p,
-  li {
-    font-size: 3rem;
-  }
-
-  li:not(:last-of-type) {
-    margin-bottom: 0.5rem;
+  &__time {
+    font-weight: bold;
+    font-size: 4rem;
   }
 
   &__buttons {
