@@ -4,8 +4,6 @@ export const DEFAULT_QUESTIONS = [
   { name: '有公司 logo 的物品', min: 3, max: 6, unit: '個' },
   { name: '有貓咪圖示或造型的物品', min: 2, max: 5, unit: '件' },
   { name: '有狗狗圖示或造型的物品', min: 2, max: 5, unit: '件' },
-  { name: '面無表情照片', min: 2, max: 6, unit: '張' },
-  { name: '扮鬼臉照片', min: 2, max: 6, unit: '張' },
   //
   { name: '雨傘', min: 3, max: 6, unit: '把' },
   { name: '眼鏡', min: 3, max: 6, unit: '副' },
